@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int num, copy_num, digit, reversed = 0;
+     cout << "Enter a positive number: ";
+     cin >> num;
+     copy_num = num;
+
+     do
+     {
+         digit = copy_num % 10;
+         reversed = (reversed * 10) + digit;
+         copy_num = copy_num / 10;
+     } while (copy_num != 0);
+
+     if (num == reversed)
+         cout << "The number is a palindrome.";
+     else
+         cout << "The number is not a palindrome.";
+
+    return 0;
+}
